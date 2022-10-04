@@ -3,7 +3,7 @@ Repositorio proyecto Biblioteca
 
 Integrantes: 
 
-Carla Calanit Artaza
+Carla Artaza
 
 Biole Amanda
 
