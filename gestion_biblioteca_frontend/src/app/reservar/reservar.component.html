@@ -1,0 +1,21 @@
+<div class="container caja  w-25 mx-auto container col-md-3  offset-md-3 mx-auto p-4 border border-5">
+    <h3>Reservar Libro</h3>
+    <form (ngSubmit)="onSubmit()">
+
+        <div class="form-group my-1">
+            <label>Fecha reserva</label>
+            <input type="date" class="form-control" id="fechaReserva" name="fechaReserva"
+            [(ngModel)] = "reserva.fechaReserva" #fecha>
+        </div>
+     
+     <div class="form-group my-1">
+            <label>DNI usuario</label>
+            <input type="text" class="form-control" id="dni" name="dni"
+            [(ngModel)] = "reserva.id_usuario">
+        </div>
+     
+    
+
+       <button class="btn btn-success my-3 ">Reservar</button>
+     </form>
+    </div>

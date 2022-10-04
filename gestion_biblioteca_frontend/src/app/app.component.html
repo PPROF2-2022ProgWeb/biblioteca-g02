@@ -1,0 +1,85 @@
+<div id="body">
+
+  <header  class="text-dark" >
+    <div class="icon__menu">
+        <i class="fas fa-bars" id="btn_open" (click)="mostrarNav()" (dblclick)="ocultarNav()" [class.moverHeader]="nav==true" ></i>
+    </div>
+
+    <div class="login">
+        <a  id="color" class="m-3" routerLink="login" >Iniciar sesiòn</a>
+        <a  id="color" class="m-3" href="#">Cerrar sesiòn</a>
+    </div>
+</header>
+
+
+<section class="fecha">
+
+{{fecha}}
+
+</section>
+
+
+<nav>
+
+<div class="menu__side" id="menu_side" [class.mostrarNav]="nav==true" >
+
+    <div class="name__page">
+        <i class="fa fa-book"></i>
+        <h4>Los Lectores</h4>
+    </div>
+
+    <div class="options__menu">	
+
+        <a routerLink="home" class="selected">
+            <div class="option">
+                <i class="fas fa-home" title="Inicio"></i>
+                <h4>Inicio</h4>
+            </div>
+        </a>
+
+
+        <a routerLink="libros">
+            <div class="option">
+                <i class="far fa-file" title="libros"></i>
+                <h4>Libros</h4>
+            </div>
+        </a>
+        
+        <a routerLink="usuarios">
+            <div class="option">
+                <i class="fa fa-user" title="Usuarios"></i>
+                <h4>Usuarios</h4>
+            </div>
+        </a>
+
+        <a routerLink="prestamo">
+            <div class="option">
+                <i class="fa fa-calendar-plus-o" title="Préstamo"></i>
+                <h4>Prestamos</h4>
+            </div>
+        </a>
+
+        <a routerLink="devolucion">
+            <div class="option">
+                <i class="fa fa-calendar-check-o" title="Devoluciones"></i>
+                <h4>Devoluciones</h4>
+            </div>
+        </a>
+
+        <a routerLink="reportes">
+            <div class="option">
+                <i class="fa fa-file-text-o" title="Reportes"></i>
+                <h4>Reportes</h4>
+            </div>
+        </a>
+
+
+     
+
+    </div>
+</div>
+</nav>
+
+</div>
+
+<router-outlet></router-outlet>

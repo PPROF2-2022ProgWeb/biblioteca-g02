@@ -1,0 +1,27 @@
+<div class=" caja prestamo container col-md-3  offset-md-3 mx-auto p-4 border border-5">
+    <h3 class="text-center">Prestar libro</h3>
+    <form (ngSubmit)="onSubmit()" >
+      <div class="form-group">
+         <label>ISBN libro</label>
+         <input type="text" class="form-control" id="isbn" name="isbn" 
+           #id  [(ngModel)] = "prestamo.isbn">
+
+         <label>Cliente</label>
+         <input type="text" class="form-control" id="cliente" name="cliente" 
+         [(ngModel)] = "prestamo.clientePrestamo">
+          
+
+        <label>Fecha prestamo</label>
+        <input type="date" class="form-control" id="fechaPrestamo" name="fechaPrestamo" 
+              [(ngModel)] = "prestamo.fechaPrestamo">
+          
+             <label>Fecha  fin prestamo</label>
+             <input type="date" class="form-control" id="fechaDevolucionPrestamo" name="fechaDevolucionPrestamo" 
+             [(ngModel)] = "prestamo.fechaDevolucionPrestamo">
+               
+        
+     </div>
+  
+     <button class="btn btn-success my-3"  (click)="getInputValue(id.value)">Prestar</button>
+   </form>
+    </div>

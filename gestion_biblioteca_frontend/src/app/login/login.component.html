@@ -1,0 +1,22 @@
+<div class="caja container col-md-3  offset-md-3 mx-auto  p-4 border border-5">
+ <h3 class="text-center">Iniciar sesion</h3>
+  <form>
+    <div class="form-group">
+        <label>Usuario</label>
+        <input type="text" class="form-control" id="nombre" name="nombre"
+        #id>
+    </div>
+
+    <div class="form-group">
+        <label>Clave</label>
+        <input type="text" class="form-control" id="clave" name="clave"
+        #clave>
+    </div>
+
+    <button type="button" class="btn btn-success my-2 " (click)="ingresar(id.value, clave.value)">Entrar</button>
+
+
+    <p>No estas registrado? <a (click)="abrirRegistro()"
+    style="text-decoration: underline; cursor:pointer">Registrate aqui</a></p>
+  </form>
+</div>

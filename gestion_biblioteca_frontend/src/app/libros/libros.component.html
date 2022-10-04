@@ -1,0 +1,60 @@
+<div class="caja container col-md-3  offset-md-3 mx-auto p-4 border border-5" id="buscar-libros">
+    <h3 class="text-center">Buscar libro</h3>
+     <form>
+        <div class="form-group">
+           <label>ISBN libro</label>
+           <input type="text" class="form-control" id="isbn" name="isbn"
+           #isbn>
+           <ul *ngIf="buscar == true">
+            <li>ISBN: {{libro1.isbn}}</li>
+            <li>TITULO: {{libro1.titulo}}</li>
+            <li>AUTOR: {{libro1.autor}}</li>
+            <li>EDITORIAL: {{libro1.editorial}}</li>
+            <li>CATEGORIA: {{libro1.categoria}}</li>
+           </ul>
+       </div>
+    
+       <button class="btn btn-success my-3 " (click)="getInputValue(isbn.value)">Buscar</button>
+     </form>
+
+  
+     <div>
+      <a (click)="abrirAddLibro()" 
+      style="text-decoration: underline; cursor:pointer"> Añadir Libro </a>
+     </div>
+
+    </div>
+
+    <table class="table table-striped table-hover w-50 my-5 mx-auto ">
+      <thead class="table-dark">
+        <tr>
+        <th>ISBN</th>
+        <th>Titulo</th>
+        <th>Autor</th>
+        <th>Editorial</th>
+        <th>Categoria</th>
+        <th>Estado</th>
+        <th>Accion</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let libro of libros">
+          <td>{{libro.isbn}}</td>
+          <td>{{libro.titulo}}</td>
+          <td>{{libro.autor}}</td>
+          <td>{{libro.editorial}}</td>
+          <td>{{libro.categoria}}</td>
+          <td *ngIf="libro.estado == 1" style="color: red; font-weight: 700;">Reservado</td>
+          <td *ngIf="libro.estado == 2" style="color: blue; font-weight: 700;">Prestado</td>
+          <td *ngIf="libro.estado == 0" style="color: green;  font-weight: 700;">Disponible</td>
+          <td>
+            <button (click)="actualizarLibro1(libro.isbn)" class="btn btn-warning w-75 m-1">Actualizar</button>
+            <button (click)="eliminarLibro(libro.isbn)" class="btn btn-danger w-75 m-1">Eliminar</button>
+            <button (click)="reservarLibro(libro.isbn)" class="btn btn-primary w-75 m-1" *ngIf="libro.estado == 1 || libro.estado == 2 " disabled>Reservar</button>
+            <button (click)="reservarLibro(libro.isbn)" class="btn btn-primary w-75 m-1"  *ngIf="libro.estado == 0" >Reservar</button>
+          </td>
+        </tr>   
+
+        
+      </tbody>
+    </table>

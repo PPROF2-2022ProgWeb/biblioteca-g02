@@ -1,0 +1,23 @@
+<div class="caja container col-md-3  offset-md-3 mx-auto p-4 border border-5">
+    <h3 class="text-center">Reportar libro perdido</h3>
+     <form (ngSubmit)="onSubmit()">
+
+            <div class="form-group my-1">
+            <label>ISBN Libro Perdido</label>
+            <input type="number" class="form-control" id="isbn"
+            [(ngModel)] = "libroPerdido.isbn" name="isbn"/>
+            </div>
+
+
+            <div class="form-group my-1">
+            <label>Fecha de perdida</label>
+            <input type="Date" class="form-control" id="fecha"
+            [(ngModel)] = "libroPerdido.fechaPerdida" name="fecha"/>
+            </div>
+
+
+       <button class="btn btn-success my-3 ">Reportar</button> 
+    </form>
+
+  
+</div>

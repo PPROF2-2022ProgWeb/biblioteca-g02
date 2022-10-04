@@ -1,0 +1,49 @@
+
+<div class="añadir-libro container col-md-3  offset-md-3 mx-auto p-4 border border-5">
+    <h3 class="text-center">Añadir libro</h3>
+     <form (ngSubmit)="onSubmit()">
+
+            <div class="form-group my-1">
+            <label>ID Libro</label>
+            <input type="number" class="form-control" id="isbn"
+            [(ngModel)] = "libro.isbn" name="isbn"/>
+            </div>
+
+            <div class="form-group my-1">
+            <label>Titulo</label>
+            <input type="text" class="form-control" id="titulo"
+            [(ngModel)] = "libro.titulo" name="titulo"/>
+            </div>
+
+            <div class="form-group my-1">
+            <label>Autor</label>
+            <input type="text" class="form-control" id="autor"
+            [(ngModel)] = "libro.autor" name="autor"/>
+            </div>
+
+
+            <div class="form-group my-1">
+            <label>Editorial</label>
+            <input type="text" class="form-control" id="editorial"
+            [(ngModel)] = "libro.editorial" name="editorial"/>
+            </div>
+
+            <div class="form-group my-1">
+            <label>Categoria</label>
+            <input type="text" class="form-control" id="categoria"
+            [(ngModel)] = "libro.categoria" name="categoria"/>
+            </div>
+
+            <div class="form-group my-1">
+            <label>Fecha de publicacion</label>
+            <input type="date" class="form-control" id="fechaPublicacion"
+            [(ngModel)] = "libro.fechaPublicacion" name="fechaPublicacion"/>
+            </div>
+       <button class="btn btn-success my-3 ">Añadir libro</button> 
+    </form>
+
+     <div>
+     <a (click)="volverLibros()"
+     style="text-decoration: underline; cursor:pointer">Volver</a>
+    </div>
+    
