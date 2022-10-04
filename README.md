@@ -17,6 +17,7 @@ JAVA -
 SPRING BOOT - 
 MYSQL 
 
+![web_biblioteca](https://user-images.githubusercontent.com/90620453/193719700-52485579-b4a2-41ec-8071-c544a5903446.png)
 
 Consignas:
 PROYECTO GESTIÓN BIBLIOTECA
