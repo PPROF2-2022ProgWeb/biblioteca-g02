@@ -8,14 +8,14 @@ Carla Calanit Artaza
 Biole Amanda
 
 Tecnologìas utilizadas:
-HTML
-CSS
-BOOTSTRAP
-ANGULAR
-TYPESCRIPT
-JAVA
-SPRING BOOT
-MYSQL
+HTML - 
+CSS - 
+BOOTSTRAP - 
+ANGULAR - 
+TYPESCRIPT - 
+JAVA - 
+SPRING BOOT - 
+MYSQL 
 
 
 Consignas:
